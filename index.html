@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="css/styles.css">
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,900" rel="stylesheet">
+<script src="https://npmcdn.com/particlesjs@2.2.2/dist/particles.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="js/script.js"></script>
+
+<body>
+    <header class="header">
+      <ul class="header__meta">
+        <li>Versiyon: <strong>2.2.2</strong></li>
+        <li>Lisans: <strong>MIT</strong></li>
+      </ul>
+
+      <div class="container">
+        <div class="header__introduction">
+          <h1>Ali Coin Group</h1>
+          <h2>with the future...</h2>
+
+          <div class="buttons">
+            <a class="button button--primary button--download" href="/signup">
+              <div class="button__icon"></div>
+              <div class="button__text">
+                <span class="button__action">Sign with</span>
+                <span class="button__kind">E-Mail</span>
+              </div>
+            </a>
+            <a class="button button--secondary button--github" href="https://github.com/alicangnll" target="_blank">
+              <div class="button__icon"></div>
+              <div class="button__text">
+                <span class="button__action">View on</span>
+                <span class="button__kind">GitHub</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <canvas class="header__background"></canvas>
+</body>
+<script>
+      window.onload = function() {
+        Particles.init({
+          selector: '.header__background',
+          color: '#75A5B7',
+          maxParticles: 120,
+          connectParticles: true,
+          responsive: [
+            {
+              breakpoint: 768,
+              options: {
+                maxParticles: 80
+              }
+            }, {
+              breakpoint: 375,
+              options: {
+                maxParticles: 50
+              }
+            }
+          ]
+        });
+      };
+    </script>
+</header>
