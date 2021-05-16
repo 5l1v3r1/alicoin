@@ -11,4 +11,9 @@ $(document).ready(function() {
 	setTimeout(function() {
 		$('#boxes, body').addClass('loaded');
 	}, 60000);
-})
+});
+
+$(document).ready(function(){
+  var loading = $(".loading");
+  loading.delay(loading.attr("delay-hide")).slideUp();
+});
