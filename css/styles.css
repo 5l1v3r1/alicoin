@@ -2,11 +2,6 @@
   RESET
 *********************************************************/
 
-/*
-PEN BY: @AliRanjbar
-Site: www.aliranjbar.ir
-pen lang: html, css, js(jquery)
-*/
  @import url('https://fonts.googleapis.com/css?family=Lobster');
 .loading {
   width: 100%;
@@ -14,9 +9,20 @@ pen lang: html, css, js(jquery)
   position: fixed;
   top: 0;
   left: 0;
-  background: #333;
+  animation: backGround 3s infinite;
   z-index: 99;
 }
+
+@keyframes backGround {
+
+	0%   {background-color: #272727;}
+    100% {background-color: #1E1F26;}
+
+}
+a:hover {
+  color: white;
+}
+
 .loading:after {
   content: "";
   width: 50px;
@@ -27,9 +33,9 @@ pen lang: html, css, js(jquery)
   left: 0;
   bottom: 0;
   margin: auto;
-  border: 6px solid #f2f2f2;
-  border-top: 6px dotted #f2f2f2;
-  border-bottom: 6px dotted #f2f2f2;
+  border: 3px solid #f2f2f2;
+  border-top: 3px dotted #f2f2f2;
+  border-bottom: 3px dotted #f2f2f2;
   border-radius: 50%;
   animation: loading 2s infinite;
 }
@@ -38,7 +44,6 @@ pen lang: html, css, js(jquery)
   font-size: 20px;
   letter-spacing: 1px;
   color: white;
-  content: "Loading...";
   position: absolute;
   top: 57%;
   text-align: center;
@@ -48,23 +53,11 @@ pen lang: html, css, js(jquery)
 }
 
 @keyframes loading {
-  0% {
-    transform: rotate(0);
-  }
-  50% {
+  from {
+    transform: rotate(0deg);
+  } to {
     transform: rotate(360deg);
   }
-}
-
-
-#AliRanjbar {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  font-size: 13px;
-  color: #444;
-  font-family: 'Acme', sans-serif;
-  z-index: 99;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -318,31 +311,9 @@ hr {
 
 .header {
   height: 100%;
-  background: url('../img/background.jpg') bottom no-repeat transparent;
+  background: url('../img/gif1.gif') bottom no-repeat transparent;
   background-size: cover;
 }
-@keyframes image{
-	0%{
-		background:url("../img/background.jpg") bottom no-repeat transparent;
-	}
- 
-	25%{
-		background:url("../img/background2.jpg") bottom no-repeat transparent;
-	}
- 
-	50%{
-		background:url("../img/background3.jpg") bottom no-repeat transparent;
-	}
- 
-	75%{
-		background:url("../img/background4.jpg") bottom no-repeat transparent;
-	}
- 
-	100%{
-		background:url("../img/background5.jpg") bottom no-repeat transparent;
-	}
-}
-
 .header .header__meta {
   position: absolute;
   top: 40px;
